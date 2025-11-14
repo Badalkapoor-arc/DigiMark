@@ -1,0 +1,162 @@
+#image{
+    background:url("https://www.wbcsd.org/wp-content/uploads/2024/05/E-commerce-businesses-an-ideal-candidate-to-lead-the-EV-transition-in-India-new-report-shows_i1140-jpg.webp");
+    background-size:cover;
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+}
+header{
+    overflow:hidden;
+}
+#toolbar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:95.5%;
+    height:15%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    padding-left:20px;
+    padding-right:20px;
+    border:3px solid rgb(112, 112, 249);
+    background-color:rgb(178, 178, 242,0);
+    border-radius:20px;
+}
+#logo{
+    text-shadow:1px 1px 1px black;
+    color:white;
+    text-shadow:0 0 1px white,
+    0 0 2px white;
+    font-weight:1000;
+    font-size:2em;
+    font-family:"Pacifico", cursive;
+}
+#anchor{
+    text-shadow:1px 1px 1px black;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:right;
+    align-items:center;
+    width:100%;
+    height:50%;
+}
+#anchor>span{
+    font-style:underline;
+    font-family:cursive;
+    font-size:1em;
+    padding-left:2%;
+    padding-right:2%;
+    color:blueviolet;
+}
+#container{
+    border:1px solid grey;
+    margin:10px;
+    position:relative;
+    backdrop-filter:blur(20px);
+    padding:20px;
+    border-radius:20px;
+    width:80%;
+    height:75%;
+}
+#info{
+    overflow:hidden;
+    width:45%;
+    height:80%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    align-items:flex-end;
+    position:absolute;
+    top:20%;
+    right:10px;
+}
+#head{
+    font-family:cursive;
+    font-size:2em;
+    color:black;
+    text-shadow:0 0 1px black,
+    0 0 2px black;
+}
+#paragraph{
+    font-family:cursive;
+    font-size:0.8em;
+    color:black;
+    text-shadow:0 0 1px black;
+}
+#contact{
+    position:relative;
+    width:25%;
+    height:15%;
+    background-color:blueviolet;
+    color:white;
+    border-radius:20px;
+    border:none;
+    margin:1%;
+    box-shadow:inset -5px -8px 10px rgb(83, 5, 155),
+    inset 13px 12px 10px rgb(163, 74, 247);
+}
+#contact:active{
+    box-shadow:inset 4px 5px 3px rgb(83, 5, 155),
+    inset -2px -3px 10px rgb(163, 74, 247);
+}
+#tools{
+    background-color:rgb(138, 43, 226,0.9);
+    position:absolute;
+    top:100%;
+    left:1%;
+    border:none;
+    border:2px solid blueviolet;
+    width:90%;
+    height:70%;
+    border-radius:20px;
+    padding:40px;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items:center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:0.9em;
+}
+#tools>div{
+    position:relative;
+    background:url("https://www.wbcsd.org/wp-content/uploads/2024/05/E-commerce-businesses-an-ideal-candidate-to-lead-the-EV-transition-in-India-new-report-shows_i1140-jpg.webp");
+    background-size:cover;
+    backdrop-filter:blur(20px);
+    width:20%;
+    height:80%;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:30px;
+    color:white;
+    font-size:1em;
+    font-weight:1000;
+    text-shadow:0 0 1px white;
+    box-shadow:5px 4px 5px 2px rgb(89, 2, 170);
+    transition:all 0.5s ease-in-out;
+}
+#tools>div>p{
+    background-color:rgb(138, 43, 226,0.9);
+    padding:20px;
+    margin:10px;
+    width:80%;
+    height:60%;
+    border-radius:20px;
+    box-shadow:inset 3px 3px 3px 1px rgb(89, 2, 170);
+    transition:all 0.5s ease-in-out;
+
+}
+#tools>div:hover{
+    transform:translateY(-10px);
+    transform: scale(1.02);
+    box-shadow:5px 4px 10px 2px rgb(89, 2, 170);
+}
+#tools>div:hover>p{
+    box-shadow:inset 4px 4px 5px 2px rgb(89, 2, 170);
+}

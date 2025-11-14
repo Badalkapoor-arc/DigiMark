@@ -1,0 +1,160 @@
+body{
+    overflow-x:hidden;
+    overflow-y:scroll;
+    min-height:100vh;
+}
+#image{
+    background-image:url("https://planetavirtual502.com/wp-content/uploads/2023/11/E-commerce-brasileiro-lidera-o-ranking-mundial-de-crescimento.jpeg");
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    background-size:cover;
+}
+#logoB{
+    background-color:rgb(159, 78, 234);
+    width:100vw;
+    height:20%;
+    margin:0;
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+#logo{
+    color:white;
+    text-shadow:0 0 1px white,
+    0 0 2px white;
+    font-family:"Pacifico", cursive;
+    margin:10px;
+}
+#scroll{
+    position:absolute;
+    top:70%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90vw;
+    height:70vh;
+    overflow-x:auto;
+    display:flex;
+    scroll-behavior:smooth;
+    padding-left:900px;
+    padding-right:900px;
+    scroll-snap-type:x mandatory;
+    scrollbar-color:red;
+}
+.para{
+    font-family:cursive;
+    padding:20px;
+    scroll-snap-align:center;
+    flex:0 0 80%;
+    height:50%;
+    background-color:blueviolet;
+    border-radius:20px;
+    font-size:1em;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}  
+#para4,#para0{
+    display:hidden;
+    background-color:rgb(255, 255, 255,0);
+}
+#scroll::-webkit-scrollbar {
+    height: 12px;
+}
+#scroll::-webkit-scrollbar-track {
+    background:none;
+}
+#scroll::-webkit-scrollbar-thumb {
+    background:none;
+    border-radius: 6px;
+}
+body::-webkit-scrollbar{
+    width:0px;
+}
+#scroll > div > .bold{
+    margin:0;
+    font-size:2em;
+    font-weight:200;
+    color:white;
+    text-shadow:0 0 1px white,
+    0 0 2px white;
+}
+footer{
+    font-family:'Courier New', Courier, monospace;
+    font-size:1em;
+    padding:20px;
+    background-color:rgb(70, 70, 70,0.8);
+    width:100vw;
+    height:70vh;
+    z-index:1;
+    position:absolute;
+    top:100%;
+    left:0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+footer>#container>section>ul{
+    list-style:none;
+    padding:10px;
+    margin:10px;
+}
+footer>div>section>ul>li{
+    padding:2px;
+    text-decoration:underline;
+}
+section{
+    position:relative;
+    width:100%;
+    height:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+    color:white;
+    text-shadow:0 0 10px white;
+    cursor:pointer;
+}
+a{
+    color:white;
+}
+h3{
+    padding:0px;
+}
+#container{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:flex-start;
+}
+hr{
+    margin:0;
+    background-color:white;
+    color:white;
+    width:80vw;
+    height:1px;
+    border-radius:50px;
+    box-shadow:0 0 10px 2px white;
+}
+#logoF{
+    color:white;
+    text-shadow:0 0 1px white,
+    0 0 2px white;
+    font-family:"Pacifico", cursive;
+}
+#symbols{
+    font-size:2em;
+    color:white;
+    padding-top:25px;
+    padding-left:0;
+    padding-right:0;
+    text-shadow:0 0 10px white,
+    0 0 20px black;
+}

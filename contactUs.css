@@ -1,0 +1,76 @@
+body{
+    /* background-image:linear-gradient(to bottom right,white 50%, 90%); */
+    position:relative;
+    font-family:"Michroma", sans-serif;
+    color:blueviolet;
+    text-shadow:0 0 1px rgb(96, 19, 167);
+    background-image:repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 20px),
+        repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.1) 0, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 20px);
+    background-size:40px 40px;
+}
+h1,#intro{
+    position:relative;
+    top:0;
+    left:0;
+    margin:10px;
+}
+#container1{
+    background-image:radial-gradient(circle);
+    position:relative;
+    text-align:right;
+    width:60%;
+    background-color:rgb(255, 255, 255,0.1);
+    padding:20px;
+}
+#container{
+    position:relative;
+    background-image:repeating-linear-gradient(to bottom,rgba(161, 159, 159, 0.1) 0 1px,transparent 1px 40px),
+    repeating-linear-gradient(to right,rgba(161, 159, 159, 0.1) 0 1px,transparent 1px 40px),
+    radial-gradient(circle 100vw at 80% 80%,white,transparent);
+    box-shadow:inset 0 0 2px 3px rgb(156, 155, 155);
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    background-color:rgb(227, 227, 227);
+}
+form>input,form>textarea{
+    border-radius:20px;
+    border:none;
+    background-color:rgb(215, 215, 215);
+    padding:10px;
+    margin:5px;
+    outline:none;
+    box-shadow:inset 2px 2px 3px rgb(156, 155, 155);
+}
+form>button{
+    font-family:"Michroma", sans-serif;
+    font-weight:1000;
+    background-color:rgb(146, 34, 251);
+    box-shadow:inset 3px 4px 2px rgb(102, 23, 175);
+    padding:10px;
+    margin:5px;
+    width:30%;
+    border:none;
+    border-radius:20px;
+}
+#style{
+    position:absolute;
+    top:50%;
+    left:10%;
+    transform:translateY(-50%);
+}
+.contact-info,.rate-us{
+    margin:10px;
+    padding:20px;
+    color:white;
+    width:40vw;
+    background-color:blueviolet;
+    border-radius:20px;
+    box-shadow:inset -15px -14px 12px rgb(102, 24, 176),
+    inset 15px 14px 12px rgb(165, 71, 253);
+}
+#info{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+}

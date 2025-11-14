@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="background"></div>
+    <span id="logo">DiGiMark Pay</span>
+    <form method="post">
+        <label for="number">Card Number:</label><br>
+        <input type="text" placeholder="ex:234xxxxxxx"><br>
+        <label for="expiry">Card expiry:</label><br>
+        <input type="text" placeholder="DD/MM/YYYY"><br>
+        <label for="cvv">CVV:</label><br>
+        <input type="text"><br><br>
+        <button>Proceed</button>
+    </form>
+    <div id="container">
+        <div class="logo" id="loged1"><i class="fa-brands fa-google-pay fa-2xl"></i></div>
+        <div class="logo" id="loged2"><i class="fa-brands fa-apple-pay fa-2xl"></i></div>
+        <div class="logo" id="loged3"><i class="fa-brands fa-paypal fa-2xl"></i></div>
+        <div class="logo" id="loged4"><i class="fa-solid fa-credit-card fa-2xl"></i></div>
+    </div>
+    <div class="design"></div>
+</body>
+</html>
