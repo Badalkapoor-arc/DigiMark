@@ -1,6 +1,6 @@
 #image{
     background:url("https://www.wbcsd.org/wp-content/uploads/2024/05/E-commerce-businesses-an-ideal-candidate-to-lead-the-EV-transition-in-India-new-report-shows_i1140-jpg.webp");
-    background-size:cover;
+    background-size:100vw 100vh;
     width:100vw;
     height:100vh;
     position:fixed;
@@ -14,15 +14,13 @@ header{
     position:absolute;
     top:0;
     left:0;
-    width:95.5%;
-    height:15%;
+    width:98vw;
+    height:15vh;
     display:flex;
     flex-direction:row;
     justify-content:space-between;
     align-items:center;
-    padding-left:20px;
-    padding-right:20px;
-    border:3px solid rgb(112, 112, 249);
+    border:0.3vw solid rgb(112, 112, 249);
     background-color:rgb(178, 178, 242,0);
     border-radius:20px;
 }
@@ -32,7 +30,8 @@ header{
     text-shadow:0 0 1px white,
     0 0 2px white;
     font-weight:1000;
-    font-size:2em;
+    font-size:clamp(15px,2.8vw,100px);
+    padding:2%;
     font-family:"Pacifico", cursive;
 }
 #anchor{
@@ -48,55 +47,58 @@ header{
 #anchor>span{
     font-style:underline;
     font-family:cursive;
-    font-size:1em;
+    font-size:clamp(10px,1.5vw,100px);
     padding-left:2%;
     padding-right:2%;
     color:blueviolet;
 }
 #container{
     border:1px solid grey;
-    margin:10px;
+    margin:1vh 1vw 1vh 1vw;
     position:relative;
     backdrop-filter:blur(20px);
-    padding:20px;
+    padding:clamp(10px,2vw,100px);
     border-radius:20px;
     width:80%;
-    height:75%;
 }
 #info{
     overflow:hidden;
-    width:45%;
-    height:80%;
+    width:50vw;
+    height:80vh;
     display:flex;
     flex-direction:column;
-    justify-content:flex-end;
+    justify-content:flex-start;
     align-items:flex-end;
     position:absolute;
     top:20%;
     right:10px;
 }
 #head{
+    position:relative;
     font-family:cursive;
-    font-size:2em;
+    font-size:clamp(20px,3.2vw,100px);
     color:black;
     text-shadow:0 0 1px black,
     0 0 2px black;
 }
 #paragraph{
+    position:relative;
     font-family:cursive;
-    font-size:0.8em;
+    font-size:clamp(10px,1.5vw,100px);
     color:black;
     text-shadow:0 0 1px black;
 }
 #contact{
     position:relative;
-    width:25%;
-    height:15%;
+    width:clamp(140px,2vw,100px);
+    height:clamp(70px,1vw,100px);
+    padding:2vw;
     background-color:blueviolet;
     color:white;
     border-radius:20px;
     border:none;
-    margin:1%;
+    margin:1vh 1vw 2vh 1vw;
+    font-size:clamp(0.8rem,1.5vw,2rem);
     box-shadow:inset -5px -8px 10px rgb(83, 5, 155),
     inset 13px 12px 10px rgb(163, 74, 247);
 }
@@ -105,34 +107,47 @@ header{
     inset -2px -3px 10px rgb(163, 74, 247);
 }
 #tools{
-    background-color:rgb(138, 43, 226,0.9);
+    overflow-X:auto;
+    overflow-y:hidden;
+    background:radial-gradient(circle 10vw at 10% 10%,#FFDEB9,transparent),
+    radial-gradient(circle 10vw at 90% 90%,#FFDEB9,transparent),
+    radial-gradient(circle 10vw at 50% 50%,#FFDEB9,transparent),
+    radial-gradient(circle 10vw at 10% 90%,#FFDEB9,transparent),
+    radial-gradient(circle 10vw at 90% 10%,#FFDEB9,transparent),
+    blueviolet;
     position:absolute;
     top:100%;
     left:1%;
     border:none;
     border:2px solid blueviolet;
-    width:90%;
-    height:70%;
+    width:98%;
+    height:85%;
     border-radius:20px;
-    padding:40px;
     display:flex;
     flex-direction:row;
     justify-content:space-evenly;
     align-items:center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size:0.9em;
+    scroll-behavior:smooth;
+    scroll-snap-type:x mandatory;
 }
 #tools>div{
+    scroll-snap-align:center;
     position:relative;
     background:url("https://www.wbcsd.org/wp-content/uploads/2024/05/E-commerce-businesses-an-ideal-candidate-to-lead-the-EV-transition-in-India-new-report-shows_i1140-jpg.webp");
     background-size:cover;
     backdrop-filter:blur(20px);
-    width:20%;
-    height:80%;
     border-radius:20px;
     display:flex;
+    flex-grow:0;
+    flex-shrink:0;
+    flex-wrap:nowrap;
     flex-direction:column;
     align-items:center;
+    margin:2%;
+    width:20%;
+    height:70%;
     padding:30px;
     color:white;
     font-size:1em;
@@ -141,16 +156,27 @@ header{
     box-shadow:5px 4px 5px 2px rgb(89, 2, 170);
     transition:all 0.5s ease-in-out;
 }
+#tools::-webkit-scrollbar{
+    width:100%;
+}
+#tools::-webkit-scrollbar-track{
+    background-color:transparent;
+    border-radius:999px;
+    backdrop-filter:blur(20px);
+}
+#tools::-webkit-scrollbar-thumb{
+    border-radius:999px;
+    background-color:rgb(53, 2, 100);
+}
 #tools>div>p{
-    background-color:rgb(138, 43, 226,0.9);
+    background-color:blueviolet;
+    width:100%;
+    height:80%;
     padding:20px;
     margin:10px;
-    width:80%;
-    height:60%;
     border-radius:20px;
     box-shadow:inset 3px 3px 3px 1px rgb(89, 2, 170);
     transition:all 0.5s ease-in-out;
-
 }
 #tools>div:hover{
     transform:translateY(-10px);
@@ -159,4 +185,13 @@ header{
 }
 #tools>div:hover>p{
     box-shadow:inset 4px 4px 5px 2px rgb(89, 2, 170);
+}
+@media (min-width:320px) and (max-width:338px){
+    #info{
+        width:95vw;
+        height:65vh;
+    }
+    #tools>div{
+        width:60%
+    }
 }
