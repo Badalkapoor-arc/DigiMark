@@ -150,10 +150,10 @@ header{
     height:70%;
     padding:30px;
     color:white;
-    font-size:1em;
+    font-size:1.5vw;
     font-weight:1000;
     text-shadow:0 0 1px white;
-    box-shadow:5px 4px 5px 2px rgb(89, 2, 170);
+    box-shadow:5px 4px 5px 2px rgb(0,0,0,0.43);
     transition:all 0.5s ease-in-out;
 }
 #tools::-webkit-scrollbar{
@@ -175,21 +175,30 @@ header{
     padding:20px;
     margin:10px;
     border-radius:20px;
-    box-shadow:inset 3px 3px 3px 1px rgb(89, 2, 170);
+    box-shadow:inset 3px 3px 3px 1px rgb(0,0,0,0.43);
     transition:all 0.5s ease-in-out;
 }
 #tools>div:hover{
     transform:translateY(-10px);
     transform: scale(1.02);
-    box-shadow:5px 4px 10px 2px rgb(89, 2, 170);
+    box-shadow:5px 4px 10px 2px rgb(0,0,0,0.43);
 }
 #tools>div:hover>p{
-    box-shadow:inset 4px 4px 5px 2px rgb(89, 2, 170);
+    box-shadow:inset 4px 4px 5px 2px rgb(0,0,0,0.43);
 }
 @media (min-width:320px) and (max-width:338px){
     #info{
         width:95vw;
         height:65vh;
+    }
+    #tools>div{
+        width:60%
+    }
+}
+@media (min-width:375px) and (max-width:598px){
+    #info{
+        width:95vw;
+        height:55vh;
     }
     #tools>div{
         width:60%
