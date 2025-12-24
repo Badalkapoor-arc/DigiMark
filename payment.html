@@ -13,21 +13,33 @@
 <body>
     <div id="background"></div>
     <span id="logo">DiGiMark Pay</span>
-    <form method="post">
-        <label for="number">Card Number:</label><br>
-        <input type="text" placeholder="ex:234xxxxxxx"><br>
-        <label for="expiry">Card expiry:</label><br>
-        <input type="text" placeholder="DD/MM/YYYY"><br>
-        <label for="cvv">CVV:</label><br>
-        <input type="text"><br><br>
-        <button>Proceed</button>
-    </form>
-    <div id="container">
-        <div class="logo" id="loged1"><i class="fa-brands fa-google-pay fa-2xl"></i></div>
-        <div class="logo" id="loged2"><i class="fa-brands fa-apple-pay fa-2xl"></i></div>
-        <div class="logo" id="loged3"><i class="fa-brands fa-paypal fa-2xl"></i></div>
-        <div class="logo" id="loged4"><i class="fa-solid fa-credit-card fa-2xl"></i></div>
+    <div id="element_container">
+        <form method="post">
+            <label for="number">Card Number:</label><br>
+            <input type="text" placeholder="ex:234xxxxxxx"><br>
+            <label for="expiry">Card expiry:</label><br>
+            <input type="text" placeholder="DD/MM/YYYY"><br>
+            <label for="cvv">CVV:</label><br>
+            <input type="text"><br><br>
+            <button>Proceed</button>
+        </form>
+        <div id="design_container">
+            <div id="container">
+                <div class="logo" id="loged1"><i class="fa-brands fa-google-pay fa-2xl"></i></div>
+                <div class="logo" id="loged2"><i class="fa-brands fa-apple-pay fa-2xl"></i></div>
+                <div class="logo" id="loged3"><i class="fa-brands fa-paypal fa-2xl"></i></div>
+                <div class="logo" id="loged4"><i class="fa-solid fa-credit-card fa-2xl"></i></div>
+            </div>
+            <div class="design"></div>
+            <div id="d_design"></div>
+        </div>
     </div>
-    <div class="design"></div>
+    <!-- <div id="geometric_shapes">
+        <div class="shapes" id="shapes1"></div>
+        <div class="shapes" id="shapes2"></div>
+        <div class="shapes" id="shapes3"></div>
+        <div class="shapes" id="shapes4"></div>
+        <div class="shapes" id="shapes5"></div>
+    </div> -->
 </body>
 </html>

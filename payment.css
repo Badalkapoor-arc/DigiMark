@@ -8,36 +8,56 @@ body{
     position:fixed;
     top:0;
     left:0;
-    background-image:linear-gradient(to bottom left,rgb(66, 187, 248) 10%,rgb(3, 70, 253) 90%);
+    background: radial-gradient(circle 450px at 30% 50%, #0b5c6e, #03194a ,#01123e);
+    backdrop-filter:blur(20px);
+}
+#element_container{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row-reverse;
+    justify-content:space-around;
+    align-items:center;
+    align-content:space-around;
 }
 #logo{
     z-index:1;
     font-family:"Pacifico", cursive;
-    font-size:2em;
+    font-size:clamp(20px,1.5vw,100px);
     text-shadow:0 0 1px black,
     0 0 2px white,
     0 0 3px white;
     color:white;
 }
-#container{
-    z-index:2;
-    position:absolute;
-    top:50%;
-    left:30%;
-    transform:translate(-50%,-50%);
-    width:200px;
-    height:200px;
+#design_container{
+    position:relative;
+    width:clamp(250px,30vw,300px);
+    height:clamp(250px,30vw,300px);
     display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-items:start;
+    justify-content:center;
     align-items:center;
 }
+#container{
+    z-index:1;
+    background-color:rgb(255, 255, 255, 0.2);
+    width:85%;
+    height:85%;
+    display:flex;
+    border-radius:2vw;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items:center;
+    backdrop-filter:blur(5px);
+    box-shadow:inset 0 0 5px white;
+}
 .logo{
-    text-shadow:0 0 1px cyan,
-    0 0 2px cyan;
     color:black;
-    font-size:30px;
+    font-size:clamp(20px,1.5vw,100px);
     display:flex;
     flex-direction:row;
     justify-content:center;
@@ -48,85 +68,185 @@ body{
     border-radius:50%;
 }
 .design{
-    z-index:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    z-index:0;
+    background-image:linear-gradient(45deg,rgba(8, 27, 253),rgba(8, 217, 245));
+    box-shadow:0px 0px 10px #063944;
     position:absolute;
-    top:50%;
-    left:30%;
-    width:250px;
-    height:250px;
+    width:80%;
+    height:80%;
     border-radius:20px;
-    transform:translate(-50%,-50%);
-    transform-origin: center;
-    box-shadow:0 0 10px 3px #093b92;
     animation:rotate 7s infinite ease-in-out;
 }
-.design::before{
+#d_design{
     z-index:-1;
     border-radius:20px;
-    width:110%;
-    height:110%;
-    content:'';
+    width:90%;
+    height:90%;
     position:absolute;
-    background-image:linear-gradient(45deg,blue,transparent,cyan);
-    box-shadow:0 0 10px 3px #093b92;
+    background-image:linear-gradient(45deg,rgba(8, 27, 253),rgba(8, 217, 245));
+    box-shadow:0 0 20px #0287fc;
+    animation:rotate 7s infinite ease-in-out;
 }
 form{
-    box-shadow:-9px -10px 18px 1px #79a7f8,
-    8px 10px 5px 1px #1d62da;
-    background-color:rgb(231, 230, 230);
-    width:30vw;
-    position:absolute;
-    top:50%;
-    right:20px;
-    transform:translateY(-50%);
+    box-shadow:-5px -5px 9px 1px rgb(255, 255, 255, 0.2),
+    5px 5px 9px 1px rgb(0, 0, 0, 0.8);
+    background-color:rgb(222, 221, 221);
+    position:relative;
+    width:30%;
     border-radius:20px;
-    padding:20px;
-    margin:5px;
+    padding:3vw;
 }
 form>input{
-    width:80%;
+    position:relative;
+    width:90%;
+    height:10%;
     margin-top:7px;
     margin-bottom:7px;
     outline:none;
     background-color:rgb(222, 221, 221);
-    box-shadow:10px 8px 10px 1px rgb(181, 180, 180),
-    -10px -8px 13px 0px white;
+    box-shadow:4px 4px 8px 1px rgb(0,0,0,0.25),
+    -4px -4px 8px 1px rgb(255, 255, 255);
     border:none;
     border-radius:20px;
-    padding:10px;
+    padding:1vw;
     color:black;
     font-family:cursive;
+    transition:box-shadow 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+form>input:hover{
+    box-shadow:2px 2px 4px 1px rgb(181, 180, 180),
+    -2px -2px 4px 1px white;
+    transform:scale(0.99);
 }
 form>label{
     font-weight:1000;
-    font-size:0.9em;
+    font-size:clamp(10px,1.5vw,100px);
     font-family:cursive;
-    color:rgb(5, 5, 152);
     width:100%;
+    background:linear-gradient(50deg,rgba(38, 159, 242),rgba(62, 57, 218));
+    background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 form>button{
-    box-shadow:6px 4px 4px 1px rgb(181, 180, 180),
-    -10px -8px 13px 0px white;
+    position:relative;
     display:block;
     border:none;
     outline:none;
-    border-radius:20px;
-    background-color:rgb(39, 39, 252);
+    border-radius:9vw;
+    background:linear-gradient(50deg,rgba(38, 159, 242),rgba(62, 57, 218));
     color:white;
     text-shadow:0 0 1px white,
     0 0 2px white,
     0 0 3px white;
     padding:10px;
     width:60%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1;
+    font-size:clamp(10px,1.5vw,100px);
+}
+form>button::after{
+    content:'';
+    background:linear-gradient(50deg,rgba(38, 159, 242),rgba(62, 57, 218));
+    width:calc(100% + 1vw);
+    height:calc(100% + 1vw);
+    position:absolute;
+    border-radius:9vw;
+    z-index:-1;
+    filter:blur(2px);
 }
 @keyframes rotate{
     0%,100%{
-        transform:translate(-50%,-50%) rotateZ(45deg);
+        transform:rotateZ(45deg);
     }
     50%{
-        transform:translate(-50%,-50%) rotateZ(360deg);
+        transform:rotateZ(360deg);
     }
+}
+.shapes{
+    background:linear-gradient(90deg,rgba(16, 28, 76),#000B26);
+    position:absolute;
+    width:20vw;
+    height:20vw;
+    box-shadow:0 0 30px #000B26;
+    border-radius:.5vw;
+    z-index:-1;
+}
+#shapes1{
+    top:-10%;
+    right:0;
+    transform:rotate(45deg) scale(1.3);
+}
+#shapes2{
+    top:5%;
+    right:-10%;
+    transform:rotate(45deg);
+}
+#shapes3{
+    top:25%;
+    right:0%;
+    transform:rotate(45deg) scale(0.8);
+}
+#shapes4{
+    top:40%;
+    right:-10%;
+    transform:rotate(45deg);
+}
+#shapes5{
+    bottom:-10%;
+    right:0%;
+    transform:rotate(45deg) scale(1.3);
+}
+@media (min-width:320px) and (max-width:400px){
+    body{
+        overflow-y:auto;
+    }
+    #element_container{
+        height:200%;
+        flex-direction:column;
+        justify-content:space-around;
+    }
+    #background{
+        height:200vh;
+    }
+    form{
+        width:80%;
+        height:35%;
+        padding:6vw;
+    }
+    #design_container{
+        margin:0;
+    }
+    .shapes{
+        width:40vw;
+        height:40vw;
+        border-radius:2vw;
+    }
+}
+@media (min-width:400px) and (max-width:640px){
+    body{
+        overflow-y:auto;
+    }
+    #element_container{
+        height:200%;
+        flex-direction:column;
+        justify-content:space-around;
+    }
+    #background{
+        height:200vh;
+    }
+    form{
+        width:60%;
+        height:35%;
+        padding:6vw;
+    }
+    #design_container{
+        margin:0;
+    }
+    .shapes{
+        width:40vw;
+        height:40vw;
+        border-radius:2vw;
+    } 
 }
