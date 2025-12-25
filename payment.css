@@ -52,8 +52,10 @@ body{
     flex-wrap:wrap;
     justify-content:flex-start;
     align-items:center;
-    backdrop-filter:blur(5px);
-    box-shadow:inset 0 0 5px white;
+    backdrop-filter:blur(8px);
+    box-shadow:inset 0 0 7px white,
+    0 0 5px #0287fc,
+    0 0 10px #0287fc;
 }
 .logo{
     color:black;
@@ -75,7 +77,7 @@ body{
     width:80%;
     height:80%;
     border-radius:20px;
-    animation:rotate 7s infinite ease-in-out;
+    animation:rotate 7s infinite forwards;
 }
 #d_design{
     z-index:-1;
@@ -85,21 +87,20 @@ body{
     position:absolute;
     background-image:linear-gradient(45deg,rgba(8, 27, 253),rgba(8, 217, 245));
     box-shadow:0 0 20px #0287fc;
-    animation:rotate 7s infinite ease-in-out;
+    animation:rotate 7s infinite forwards;
 }
 form{
     box-shadow:-5px -5px 9px 1px rgb(255, 255, 255, 0.2),
     5px 5px 9px 1px rgb(0, 0, 0, 0.8);
     background-color:rgb(222, 221, 221);
     position:relative;
-    width:30%;
     border-radius:20px;
-    padding:3vw;
+    padding:clamp(25px,2vw,100px);
 }
 form>input{
     position:relative;
-    width:90%;
-    height:10%;
+    width:clamp(200px,25vw,300px);
+    height:clamp(25px,5vh,300px);
     margin-top:7px;
     margin-bottom:7px;
     outline:none;
@@ -108,7 +109,7 @@ form>input{
     -4px -4px 8px 1px rgb(255, 255, 255);
     border:none;
     border-radius:20px;
-    padding:1vw;
+    padding:clamp(8px,1vw,100px);
     color:black;
     font-family:cursive;
     transition:box-shadow 0.8s ease-in-out, transform 0.8s ease-in-out;
@@ -138,8 +139,9 @@ form>button{
     text-shadow:0 0 1px white,
     0 0 2px white,
     0 0 3px white;
-    padding:10px;
-    width:60%;
+    padding:clamp(8px,1vw,100px);
+    width:clamp(150px,20vw,300px);
+    height:clamp(35px,5vh,300px);
     display:flex;
     justify-content:center;
     align-items:center;
@@ -157,11 +159,11 @@ form>button::after{
     filter:blur(2px);
 }
 @keyframes rotate{
-    0%,100%{
+    from{
         transform:rotateZ(45deg);
     }
-    50%{
-        transform:rotateZ(360deg);
+    to{
+        transform:rotateZ(405deg);
     }
 }
 .shapes{
@@ -210,11 +212,6 @@ form>button::after{
     #background{
         height:200vh;
     }
-    form{
-        width:80%;
-        height:35%;
-        padding:6vw;
-    }
     #design_container{
         margin:0;
     }
@@ -235,11 +232,6 @@ form>button::after{
     }
     #background{
         height:200vh;
-    }
-    form{
-        width:60%;
-        height:35%;
-        padding:6vw;
     }
     #design_container{
         margin:0;
